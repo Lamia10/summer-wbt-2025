@@ -1,0 +1,115 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #81a5e4;
+}
+
+li {
+    float: inline-end;
+}
+
+li a {
+    display: block;
+    color: rgb(250, 250, 252);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*.conhead {
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+}
+    */
+
+li a:hover {
+    background-color: #82bee3;
+}
+
+.con {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(250, 250, 252);
+
+    float: left;
+}
+
+#name {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(250, 250, 252);
+    float: left;
+}
+
+body {
+
+
+    font-size: larger;
+    color: #35195f;
+
+
+}
+
+
+
+h2 {
+    text-align: center;
+    color: #35195f;
+
+
+
+}
+
+.contact-form {
+    max-width: 80%;
+    margin: 2% 8% 3% 8%;
+    background-color: rgb(228, 208, 236);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #35195f(0, 0, 0, 0.1);
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #35195f;
+    font-weight: bold;
+
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #35195f;
+    border-radius: 5px;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+.form-submit {
+    background-color: #35195f;
+
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-submit:hover {
+    background-color: #35195f;
+
+}

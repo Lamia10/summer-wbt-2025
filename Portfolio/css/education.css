@@ -1,0 +1,131 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #81a5e4;
+}
+
+li {
+    float: inline-end;
+}
+
+li a {
+    display: block;
+    color: rgb(250, 250, 252);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #82bee3;
+}
+
+.top-banner {
+    background-size: 100%;
+    background-color: rgb(228, 208, 236);
+    background-repeat: no-repeat;
+}
+
+/*
+.eduhead {
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+}
+*/
+body {
+
+
+    font-size: larger;
+    color: #35195f;
+
+}
+
+.edu {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(250, 250, 252);
+    float: left;
+}
+
+#name {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(250, 250, 252);
+    float: left;
+}
+
+.school {
+
+
+    background-color: transparent;
+    border: 10px dashed transparent;
+    border-radius: 2%;
+
+    display: inline-block;
+    justify-content: center;
+}
+
+
+
+.sdesc {
+    padding-inline-start: 2%;
+    margin: 2%;
+    width: 60%;
+
+
+}
+
+.spic {
+    padding-inline-start: 2%;
+    margin: 2%;
+    width: 10%;
+
+    transition: 1s;
+    cursor: pointer;
+}
+
+img:hover {
+    scale: 1.5;
+}
+
+.university {
+
+    justify-content: center;
+    background-color: transparent;
+    border: 10px dashed transparent;
+    border-radius: 2%;
+
+    display: inline-block;
+
+}
+
+
+
+.udesc {
+    padding: 0% 0% 2% 5%;
+    margin: 0% 2% 1% 3%;
+    width: 60%;
+
+
+
+
+}
+
+.upic {
+    padding-inline-start: 2%;
+    margin: 0% 10% 2% 2%;
+    width: 10%;
+    transition: 1s;
+    cursor: pointer;
+
+
+
+}

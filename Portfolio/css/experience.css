@@ -1,0 +1,118 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #81a5e4;
+}
+
+li {
+    float: inline-end;
+}
+
+li a {
+    display: block;
+    color: rgb(250, 250, 252);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #82bee3;
+}
+
+/*.exphead {
+
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+}
+*/
+.exp {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(250, 250, 252);
+
+    float: left;
+}
+
+#name {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgb(250, 250, 252);
+    float: left;
+}
+
+p {
+
+    font-size: larger;
+    color: #35195f;
+}
+
+.top-banner {
+    background-size: 100%;
+    background-color: rgb(228, 208, 236);
+    background-repeat: no-repeat;
+}
+
+body {
+
+
+    font-size: larger;
+    color: #35195f;
+
+}
+
+.acc {
+
+
+    background-color: transparent;
+    border: 10px dashed transparent;
+    border-radius: 2%;
+
+    display: inline-block;
+    justify-content: center;
+}
+
+
+
+.desc {
+    padding-inline-start: 2%;
+    margin: 2%;
+    width: 60%;
+
+
+}
+
+.pic {
+    padding-inline-start: 2%;
+    margin: 2%;
+    width: 10%;
+    transition: 1s;
+    cursor: pointer;
+
+}
+
+img:hover {
+    scale: 1.5;
+}
+
+.background {
+    background-color: rgb(228, 208, 236);
+
+}
+
+.more {
+    background-color: transparent;
+    border: 10px dashed transparent;
+    border-radius: 2%;
+    padding: 2% 2% 2% 4%;
+    display: inline-block;
+    justify-content: center;
+    width: 80%;
+}

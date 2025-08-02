@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 30px;
+    color: #000;
+}
+
+.nav {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+
+}
+
+
+
+h2 {
+    color: #c00;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 4px;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+
+
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    box-sizing: border-box;
+
+
+
+}
+
+.form-row label {
+    flex: 1;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.radio-group legend {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.radio-group span {
+    font-weight: normal;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-actions {
+    text-align: left;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ddd;
+    border: 1px solid #999;
+    padding: 5px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+.footer-note {
+    font-size: 11px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.footer-note a {
+    color: #666;
+    text-decoration: underline;
+}
