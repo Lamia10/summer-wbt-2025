@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Search Doctors</title>
+    <link rel="stylesheet" href="findadoc.css">
+    <script src="findadoc.js"></script>
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Emergency Contact</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+
+    <section class="search-section">
+
+
+
+
+        <h2>Search Doctors</h2>
+
+        <div class="search-box">
+            <select id="departmentFilter">
+                <option value="">Select department</option>
+                <option value="Cardiologist">Cardiology</option>
+                <option value="Neurologist">Neurology</option>
+                <option value="Dermatologist">Dermatology</option>
+                <option value="Pediatrician">Pediatrics</option>
+            </select>
+
+            <input type="text" id="nameSearch" placeholder="Search by doctor name">
+
+            <button class="search-btn" onclick="filterDoctors()">🔍</button>
+        </div>
+
+        <div class="info">
+            <h3>Find Your Doctor</h3>
+            <p>Select Department or search by doctor name to discover our expert medical professionals</p>
+        </div>
+    </section>
+
+    <!-- Doctor Cards Section -->
+    <section class="doctor-list" id="doctorList">
+        <div class="doctor-card" data-name="Dr. John Doe" data-department="Cardiologist">
+            <img src="images/John.png" alt="Dr. John Doe">
+            <h4>Dr. John Doe</h4>
+            <p>Cardiologist</p>
+        </div>
+
+        <div class="doctor-card" data-name="Dr. Sarah Smith" data-department="Neurologist">
+            <img src="images/Sarah.png" alt="Dr. Sarah Smith">
+            <h4>Dr. Sarah Smith</h4>
+            <p>Neurologist</p>
+        </div>
+
+        <div class="doctor-card" data-name="Dr. Michael Lee" data-department="Dermatologist">
+            <img src="images/lee.jpg" alt="Dr. Michael Lee">
+            <h4>Dr. Michael Lee</h4>
+            <p>Dermatologist</p>
+        </div>
+
+        <div class="doctor-card" data-name="Dr. Anna Taylor" data-department="Pediatrician">
+            <img src="images/Anna.png" alt="Dr. Anna Taylor">
+            <h4>Dr. Anna Taylor</h4>
+            <p>Pediatrician</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

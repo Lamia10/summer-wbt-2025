@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #4e48c8, #443c96);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(68, 60, 150, 0.5);
+    font-weight: 600;
+}
+
+.navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.navbar a:last-child {
+    margin-right: 0;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    outline: none;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 80px 40px 40px;
+    min-height: calc(100vh - 70px);
+    flex-wrap: wrap;
+    background-image: url('image/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+    background-color: #424998;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;
+    box-shadow: 0 4px 8px rgba(66, 73, 152, 0.4);
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.card a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2a2a72;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card a:hover,
+.card a:focus {
+    color: #443c96;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .button-row {
+        flex-direction: column;
+        padding: 100px 20px 20px;
+        min-height: auto;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+}

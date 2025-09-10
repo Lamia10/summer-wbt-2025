@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor's Portal</title>
+  <link rel="stylesheet" href="DocStyle.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Emergency Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="#">Login</a>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <button id="menuToggle" aria-label="Toggle sidebar" class="icon-btn">☰</button>
+    <h1>Doctor’s Portal</h1>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="profile">
+        <div class="avatar">DR</div>
+        <div class="details">
+          <h3>Dr. John Doe</h3>
+          <p>Cardiologist</p>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">My Patients</a>
+        <a href="#">Messages</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section class="grid">
+
+        <!-- Upcoming Appointments -->
+        <article class="card">
+          <div class="card-head">
+            <h2>Upcoming Appointments</h2>
+            <input id="apptSearch" class="search" type="text" placeholder="Search patient…" />
+          </div>
+          <div class="card-body scroll">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Patient</th>
+                  <th>Reason</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody id="apptTable">
+                <tr>
+                  <td>09:00</td>
+                  <td>Nur Hossain</td>
+                  <td>Follow-up</td>
+                  <td>In-person</td>
+                </tr>
+                <tr>
+                  <td>09:30</td>
+                  <td>Sadia Tasfia</td>
+                  <td>Chest Pain</td>
+                  <td>In-person</td>
+                </tr>
+                <tr>
+                  <td>10:15</td>
+                  <td>Rafi Ahmed</td>
+                  <td>ECG Review</td>
+                  <td>Video</td>
+                </tr>
+                <tr>
+                  <td>11:00</td>
+                  <td>Farzana Akter</td>
+                  <td>BP Check</td>
+                  <td>In-person</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- Manage Schedule -->
+        <article class="card">
+          <div class="card-head">
+            <h2>Manage Schedule</h2>
+          </div>
+          <div class="card-body">
+            <div class="week">
+              <span class="day">Mon</span>
+              <span class="day">Tue</span>
+              <span class="day">Wed</span>
+              <span class="day">Thu</span>
+              <span class="day">Fri</span>
+              <span class="day off">Sat</span>
+              <span class="day off">Sun</span>
+            </div>
+            <div class="slots" id="slotBoard">
+              <!-- Sample time slots -->
+              <button class="slot">09:00</button>
+              <button class="slot">09:30</button>
+              <button class="slot">10:00</button>
+              <button class="slot">10:30</button>
+              <button class="slot">11:00</button>
+              <button class="slot">11:30</button>
+              <button class="slot">12:00</button>
+              <button class="slot">12:30</button>
+            </div>
+            <div class="hint">Click a slot to toggle availability.</div>
+          </div>
+        </article>
+
+        <!-- Patient History -->
+        <article class="card">
+          <div class="card-head">
+            <h2>Patient History</h2>
+          </div>
+          <div class="card-body scroll">
+            <ul class="timeline">
+              <li>
+                <div class="dot"></div>
+                <div>
+                  <strong>Sadia Karim</strong> – 3 visits
+                  <div class="muted">Last: 01 Sep 2025 • Hypertension</div>
+                </div>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <div>
+                  <strong>Rafi Ahmed</strong> – 5 visits
+                  <div class="muted">Last: 28 Aug 2025 • Arrhythmia</div>
+                </div>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <div>
+                  <strong>Farzana Akter</strong> – 2 visits
+                  <div class="muted">Last: 27 Aug 2025 • High BP</div>
+                </div>
+              </li>
+              <li>
+                <div class="dot"></div>
+                <div>
+                  <strong>Nur Hossain</strong> – 4 visits
+                  <div class="muted">Last: 24 Aug 2025 • Follow-up</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Appointment Requests -->
+        <article class="card">
+          <div class="card-head">
+            <h2>Appointment Requests</h2>
+          </div>
+          <div class="card-body scroll">
+            <div class="request" data-id="1">
+              <div>
+                <strong>Mahin Rahman</strong>
+                <div class="muted">Preferred: 02:00 PM • Video</div>
+              </div>
+              <div class="actions">
+                <button class="btn success approve">Approve</button>
+                <button class="btn danger decline">Decline</button>
+              </div>
+            </div>
+            <div class="request" data-id="2">
+              <div>
+                <strong>Tasfia Jerin</strong>
+                <div class="muted">Preferred: 03:30 PM • In-person</div>
+              </div>
+              <div class="actions">
+                <button class="btn success approve">Approve</button>
+                <button class="btn danger decline">Decline</button>
+              </div>
+            </div>
+            <div class="request" data-id="3">
+              <div>
+                <strong>Rownok Jahan</strong>
+                <div class="muted">Preferred: 05:00 PM • Video</div>
+              </div>
+              <div class="actions">
+                <button class="btn success approve">Approve</button>
+                <button class="btn danger decline">Decline</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
