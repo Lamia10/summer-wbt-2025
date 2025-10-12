@@ -1,0 +1,168 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #eef6ff;
+    color: #0b2a5a;
+    padding-top: 60px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0b2a5a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+    background: #d0e8ff;
+    border-radius: 16px;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding: 0 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+
+.section-light {
+    background: #d6ebff;
+    padding: 60px 20px;
+    margin: 20px auto;
+    border-radius: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 45%;
+    background: #ffffff50;
+    backdrop-filter: blur(8px);
+    padding: 30px 20px;
+    border-radius: 14px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h2 {
+    margin: 20px 0 10px;
+}
+
+.card p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.card .icon {
+    font-size: 48px;
+}
+
+/* Why Us */
+.why-us h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.reason {
+    flex: 1 1 200px;
+    background: #ffffff50;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.reason:hover {
+    transform: translateY(-6px);
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #0b2a5a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

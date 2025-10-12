@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    padding: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    /* below navbar */
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #1e293b;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #443c96;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Main container */
+.container {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 100px auto 50px auto;
+    /* top margin to avoid navbar */
+}
+
+/* Topbar */
+.topbar {
+    margin-left: 240px;
+    /* sidebar width + some gap */
+    padding: 10px 20px;
+}
+
+/* Form styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.save-btn {
+    background: #2563eb;
+    color: #fff;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #1e40af;
+}
+
+.cancel-btn {
+    background: #e5e7eb;
+    color: #1e293b;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.cancel-btn:hover {
+    background: #cbd5e1;
+}
+
+/* Messages */
+.error {
+    color: #dc2626;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #22c55e;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #0b2a5a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}

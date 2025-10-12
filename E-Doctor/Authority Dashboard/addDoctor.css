@@ -1,0 +1,147 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #443c96;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #1e293b;
+    color: white;
+    position: fixed;
+    top: 60px;
+    /* below navbar */
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    background: #2563eb;
+}
+
+/* Main content */
+.main {
+    margin-left: 240px;
+    padding: 80px 20px 40px 20px;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Page header */
+.main h1 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.save-btn {
+    width: 100%;
+    background: #2563eb;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background: #1e40af;
+}
+
+/* Messages */
+.error {
+    color: #dc2626;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.success {
+    color: #22c55e;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #0b2a5a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
