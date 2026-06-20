@@ -1,4 +1,4 @@
-@"
+
 # 🏥 E-Doctor's Appointment System
 
 This project is a full-featured **healthcare appointment booking platform** built using **PHP and MySQL**, designed to let patients find doctors, book appointments, and manage their healthcare — while giving admins (authority) complete control to manage doctors, patients, and appointments.
