@@ -47,7 +47,7 @@ The system follows a **role-based architecture** with three separate dashboards 
 
 - PHP (Procedural, MySQLi with Prepared Statements)
 - MySQL
-- HTML5, CSS3
+- HTML, CSS
 - JavaScript
 
 ---
