@@ -1,99 +1,232 @@
-
 # 🏥 E-Doctor's Appointment System
 
-This project is a full-featured **healthcare appointment booking platform** built using **PHP and MySQL**, designed to let patients find doctors, book appointments, and manage their healthcare — while giving admins (authority) complete control to manage doctors, patients, and appointments.
+> A role-based healthcare appointment management platform that connects **patients, doctors, and administrators** in one system.
 
-The system follows a **role-based architecture** with three separate dashboards (Patient, Doctor, Authority) and demonstrates real-world concepts such as session-based authentication, secure password hashing, role-based redirects, and prepared statements for database security.
+**E-Doctor's Appointment System** is a full-featured web-based healthcare platform built with **PHP and MySQL**. It allows patients to find doctors, explore specialities, request appointments, and manage their appointments, while doctors and authorities can manage the appointment process through dedicated dashboards.
+
+The system follows a **role-based architecture** with three user roles: **Patient, Doctor, and Authority/Admin**.
 
 ---
 
 ## 🎯 Objectives
 
-- Provide a simple, intuitive platform for patients to find doctors and book appointments.
-- Allow doctors to manage and update their appointment status.
-- Allow authority (admin) to manage doctors, patients, and bookings from a central dashboard.
-- Demonstrate secure authentication and clean role-based access control.
-- Apply real-world features like doctor search, specialities listing, and emergency contact handling.
+* Provide an easy-to-use platform for patients to find doctors and request appointments.
+* Allow doctors to view and update their assigned appointments.
+* Allow Authority/Admin to manage doctors, patients, and appointment-related information.
+* Implement secure authentication and role-based access control.
+* Provide practical healthcare features such as doctor search, specialities, and emergency contact services.
 
 ---
 
 ## ✨ Key Features
 
-### 🛡️ Authority (Admin) Panel
-- Secure admin login with session-based authentication
-- Dashboard showing total doctors, total patients, and total appointments (including today's appointments)
-- Add, edit, and delete doctors
-- Add, edit, and delete patients
-- View and manage all appointment reports
-- Settings page for account management
+### 🛡️ Authority / Admin Panel
+
+* 🔐 Secure session-based admin login
+* 📊 Dashboard with total doctors, patients, and appointments
+* 📅 Today's appointment statistics
+* ➕ Add, edit, and delete doctors
+* 👤 Add, edit, and delete patients
+* 📋 View doctor feedback reports
+* ⚙️ Manage account settings
 
 ### 👨‍⚕️ Doctor Portal
-- Secure doctor login with session-based authentication
-- View assigned appointments
-- Update appointment status
+
+* 🔐 Secure session-based doctor login
+* 📅 View assigned appointments
+* 📋 View appointment history
+* 🔄 Update appointment status
+* 👤 Access relevant patient information
 
 ### 👤 Patient Dashboard
-- Patient registration and secure login
-- Browse and **find a doctor** with profile view (specialization, details)
-- View **our specialities** (departments) with images
-- **Book an appointment** by selecting doctor, date, and time
-- Automatic redirect to **Emergency Contact** page if request type is "Emergency"
-- Track personal appointments from the Patient Dashboard
-- Manage account settings
+
+* 📝 Patient registration and secure login
+* 🔎 Find doctors and view their profiles
+* 🩺 Browse available specialities
+* 📅 Request an appointment by selecting doctor, date, and time
+* 🚨 Automatic redirection to the **Emergency Contact** page for emergency requests
+* 📋 Track personal appointments
+* ⚙️ Manage account settings
 
 ---
 
-## 🛠 Technologies Used
+## 🛠️ Technologies Used
 
-- PHP (Procedural, MySQLi with Prepared Statements)
-- MySQL
-- HTML, CSS
-- JavaScript
-
----
-
-## 🗄 Database Schema
-
-| Table | Key Fields |
-|---|---|
-| **authorDB** | id, name, email, password |
-| **doctorDB** | id, name, email, password, specialization |
-| **patientDB** | id, name, email, password |
-| **appointmentDB** | id, patient_id, doctor_id, appointment_date, appointment_time, status |
+| Category                    | Technologies            |
+| --------------------------- | ----------------------- |
+| **Frontend**                | HTML5, CSS3, JavaScript |
+| **Backend**                 | PHP                     |
+| **Database**                | MySQL                   |
+| **Database Connectivity**   | MySQLi                  |
+| **Development Environment** | XAMPP, phpMyAdmin       |
 
 ---
 
-## ⚙ Setup Instructions
+## 🔐 Security
 
-1. Install **XAMPP** (or any local server with PHP + MySQL/Apache).
-2. Install **phpMyAdmin** (comes bundled with XAMPP) to manage the database.
-3. Clone the repository:
-``````bash
-   git clone https://github.com/lubna-21/E-Doctor-Appointment-System.git
-``````
-4. Move the project folder into your server's root directory (e.g. ``htdocs`` for XAMPP).
-5. Create a database named ``edoctor`` in phpMyAdmin and import the provided SQL file (if included).
-6. Update the database credentials in ``myDB/db.php`` if needed (default: host ``localhost``, user ``root``, no password).
-7. Start Apache and MySQL from the XAMPP control panel.
-8. Open your browser and go to ``http://localhost/E-Doctor/index.php``.
+The system implements several basic security practices:
+
+* Session-based authentication
+* Role-based access control
+* Password hashing using `password_hash()`
+* Password verification using `password_verify()`
+* MySQLi prepared statements
+* Input validation
 
 ---
 
-## 🚀 How It Works
+## 🗄️ Database
 
-- A **Patient** registers, logs in, and lands on the homepage where they can **Find a Doctor**, **Request an Appointment**, or browse **Our Specialities**.
-- Selecting **Find a Doctor** lets the patient view doctor profiles by specialization.
-- Selecting **Request an Appointment** lets the patient choose a doctor, date, and time — and if "Emergency" is selected, they are automatically redirected to the Emergency Contact page.
-- After login, the system checks the patient's role and redirects them to their respective dashboard (Patient / Doctor / Authority).
-- A **Doctor** logs in separately to view and update the status of their assigned appointments.
-- An **Authority (Admin)** logs in to manage doctors, patients, and appointment reports from a dedicated dashboard with live statistics.
+**Database Name:** `edoctor`
+
+### Main Tables
+
+| Table           | Description                                    |
+| --------------- | ---------------------------------------------- |
+| `authordb`      | Stores Authority/Admin account information     |
+| `doctordb`      | Stores doctor information and specializations  |
+| `patientdb`     | Stores patient information and account details |
+| `appointmentdb` | Stores patient-doctor appointment information  |
+| `feedbackdb`    | Stores doctor feedback, ratings, and comments  |
+| `specialist`    | Stores doctor specialities/departments         |
 
 ---
 
-## 🔮 Future Enhancements
+## ⚙️ Setup & Installation
 
-- Add online payment gateway integration for paid consultations.
-- Add doctor availability/time-slot management to prevent double booking.
-- Add email or SMS notifications for appointment confirmation and reminders.
-- Add a review/rating system for doctors.
-- Add password reset via email (forgot password flow).
+### 1. Install XAMPP
+
+Install **XAMPP** with Apache and MySQL.
+
+### 2. Start Services
+
+Open the XAMPP Control Panel and start:
+
+```text
+Apache
+MySQL
+```
+
+### 3. Clone the Repository
+
+```bash
+git clone https://github.com/lubna-21/E-Doctor-Appointment-System.git
+```
+
+### 4. Move the Project
+
+Place the project folder inside the XAMPP `htdocs` directory:
+
+```text
+C:\xampp\htdocs\E-Doctor\
+```
+
+### 5. Create the Database
+
+Open phpMyAdmin:
+
+```text
+http://localhost/phpmyadmin
+```
+
+Create a database named:
+
+```text
+edoctor
+```
+
+Then import the provided SQL/database file.
+
+### 6. Configure Database Connection
+
+Check the database configuration in:
+
+```text
+myDB/db.php
+```
+
+Default configuration:
+
+```text
+Host: localhost
+Username: root
+Password: empty
+Database: edoctor
+```
+
+### 7. Run the Application
+
+Open your browser and visit:
+
+```text
+http://localhost/E-Doctor/index.php
+```
+
+---
+
+## 🔄 How It Works
+
+**Patient**
+
+```text
+Register / Login
+      ↓
+Patient Dashboard
+      ↓
+Find Doctor / Specialities / Request Appointment
+      ↓
+Select Doctor + Date + Time
+      ↓
+Appointment Request
+      ↓
+Doctor Reviews & Updates Status
+```
+
+If the patient selects **Emergency** as the request type:
+
+```text
+Emergency Request
+      ↓
+Emergency Contact Page
+```
+
+**Doctor**
+
+```text
+Login
+  ↓
+Doctor Portal
+  ↓
+View Assigned Appointments
+  ↓
+Update Appointment Status
+```
+
+**Authority**
+
+```text
+Login
+  ↓
+Authority Dashboard
+  ↓
+Manage Doctors / Patients
+  ↓
+View Statistics & Feedback Reports
+```
+
+---
+
+## 🚀 Future Enhancements
+
+* 💳 Online payment gateway integration
+* 🕐 Doctor availability and time-slot management
+* 🚫 Double-booking prevention
+* 📧 Email/SMS appointment notifications
+* ⭐ Doctor review and rating system
+* 🔑 Forgot password / email password reset
+* 🔔 Real-time appointment notifications
+
+---
+
+
+⭐ **If you find this project useful, consider giving it a star!**
