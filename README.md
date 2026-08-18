@@ -135,7 +135,11 @@ Create a database named:
 edoctor
 ```
 
-Then import the provided SQL/database file.
+Then import the provided SQL file located at [`E-Doctor/edoctor.sql`](E-Doctor/edoctor.sql) using phpMyAdmin:
+   - Open phpMyAdmin → select the `edoctor` database
+   - Go to the **Import** tab
+   - Choose the `edoctor.sql` file from the `E-Doctor` folder
+   - Click **Go** — this will create all required tables (`authordb`, `doctordb`, `patientdb`, `appointmentdb`, `feedbackdb`, `specialities`)
 
 ### 6. Configure Database Connection
 
